@@ -1,38 +1,221 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color:rgb(147, 147, 147);
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  justify-content: flex-start;
   align-items: center;
+}
+
+h1 {
+  color: black;
+}
+
+.HabitList {
+  width: 70%;
+  margin-top: 20px;
+  padding: 8px;
+}
+
+.AddButton {
+  background-color:rgb(0, 255, 0);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.AddButton:hover{
+  background-color:rgb(0, 210, 0);
+}
+
+
+.HabitItem {
+  background-color: #d9d8d8;
+  height: 60px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+.HabitName {
+  width: 30%;
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 2%;
+  padding: 4px;
+  text-align: start;
+}
+
+.DaysCompleted {
+  font-size: 14px;
+  color: rgb(75, 75, 75);
+}
+
+.WeekViewButton {
+  background-color:rgb(0, 100, 255);
+  color:white;
+  text-decoration: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.WeekViewButton:hover {
+  background-color:rgb(2, 64, 156);
+}
+
+.WeekView {
+  text-align: center;
+  padding: 20px;
+}
+
+.WeekView h2 {
+  color:rgb(0, 0, 0);
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.WeekView ul {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  
+}
+
+.WeekView li {
+  display: flex;
+  height: 60px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.WeekView li h4 {
+  margin: auto 20px;
+}
+
+.WeekView label {
+  width: 90px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+}
+
+.WeekView button {
+  background-color: rgb(0, 115, 255);
+  color:white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 0px rgb(28, 28, 28, .5);
+}
+
+.BackButton{
+  padding: 5px 10px;
+  background: #515151;
   color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  width: 100px;
+}
+.BackButton:hover{
+  background: #292929;
+
 }
 
-.App-link {
-  color: #61dafb;
+.EditButton, .DeleteButton, .SaveButton, .CancelButton {
+  color:white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 2px 2px 5px 0px rgb(28, 28, 28, .5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.EditButton{
+  background: #ff9900;
+}
+
+.EditButton:hover{
+  background: #de8500;
+}
+
+.DeleteButton{
+  background: #ff0000;
+}
+
+.DeleteButton:hover{
+  background: #c30000;
+}
+.SaveButton{
+  margin-right: 20px;
+background: #5ef903;
+}
+.SaveButton:hover{
+  background: #4ac900;
   }
-  to {
-    transform: rotate(360deg);
+.CancelButton{
+background: #5a5a5a;
+}
+.CancelButton:hover{
+  background: #242424;
   }
+
+
+input[type="text"]{
+  font-size: 16px;
+  padding: 8px;
+  width: 40%;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+  box-shadow: 2px 2px 5px 0px rgb(28, 28, 28, .5);
+}
+
+p{
+  font-size: 30px;
+  margin: 30px;
 }
