@@ -7,12 +7,14 @@ function WeekView({ habits, updateHabitDays }) {
 
   const [daysCompleted, setDaysCompleted] = useState([...habit.daysCompleted]);
 
+  // This function will handle the day change when we complete habit task.
   const handleDayChange = (dayIndex, newStatus) => {
     const updatedDays = [...daysCompleted];
     updatedDays[dayIndex] = newStatus;
     setDaysCompleted(updatedDays);
   };
 
+  // This will save tha updated response.
   const handleSave = () => {
     updateHabitDays(index, daysCompleted);
     alert("Your Response Save Successfully")
@@ -20,11 +22,13 @@ function WeekView({ habits, updateHabitDays }) {
 
   return (
     <div className="WeekView">
+      {/* Title Name along with habit name */}
       <h2>Week View - {habit.name}</h2>
       <ul>
         {daysCompleted.map((status, dayIndex) => (
           <li key={dayIndex}>
             <h4>{`Day ${dayIndex + 1}`}</h4>
+            {/* Radio button to take response as input */}
             <label>
               <input type="radio" name={`status-${dayIndex}`} value="Done" checked={status === 'Done'} onChange={() => handleDayChange(dayIndex, 'Done')} />
               Done
@@ -40,7 +44,9 @@ function WeekView({ habits, updateHabitDays }) {
           </li>
         ))}
       </ul>
+      {/* Button to save the new updated response */}
       <button className='taskSave' onClick={handleSave}>Save</button>
+      {/* Link to go back to landing page */}
       <Link to="/" className="BackButton">Back</Link>
     </div>
   );
