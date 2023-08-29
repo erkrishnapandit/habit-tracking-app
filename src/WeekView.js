@@ -15,6 +15,7 @@ function WeekView({ habits, updateHabitDays }) {
 
   const handleSave = () => {
     updateHabitDays(index, daysCompleted);
+    alert("Your Response Save Successfully")
   };
 
   return (
@@ -39,7 +40,7 @@ function WeekView({ habits, updateHabitDays }) {
           </li>
         ))}
       </ul>
-      <button onClick={handleSave}>Save</button>
+      <button className='taskSave' onClick={handleSave}>Save</button>
       <Link to="/" className="BackButton">Back</Link>
     </div>
   );

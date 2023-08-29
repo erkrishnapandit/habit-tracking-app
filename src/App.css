@@ -35,8 +35,8 @@ h1 {
 }
 
 .AddButton {
-  background-color:rgb(0, 255, 0);
-  color: rgb(0, 0, 0);
+  background-color:rgb(0, 233, 0);
+  color: white;
   border-radius: 5px;
   border: none;
   padding: 5px 10px;
@@ -46,11 +46,9 @@ h1 {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-.AddButton:hover{
-  background-color:rgb(0, 210, 0);
+.AddButton:hover {
+  background-color:rgb(0, 185, 0);
 }
-
-
 .HabitItem {
   background-color: #d9d8d8;
   height: 60px;
@@ -140,6 +138,7 @@ h1 {
 }
 
 .WeekView button {
+  /* width: 80px; */
   background-color: rgb(0, 115, 255);
   color:white;
   border: none;
@@ -180,7 +179,7 @@ h1 {
 }
 
 .EditButton:hover{
-  background: #de8500;
+  background: #ad6800;
 }
 
 .DeleteButton{
@@ -188,22 +187,29 @@ h1 {
 }
 
 .DeleteButton:hover{
-  background: #c30000;
+  background: #a50000;
 }
+
 .SaveButton{
-  margin-right: 20px;
+  margin-right: 10px;
 background: #5ef903;
 }
+
 .SaveButton:hover{
-  background: #4ac900;
-  }
+  background: #3a9f00;
+}
+
 .CancelButton{
 background: #5a5a5a;
 }
+
 .CancelButton:hover{
   background: #242424;
-  }
+}
 
+.taskSave:hover{
+  background: rgb(0, 87, 192);
+}
 
 input[type="text"]{
   font-size: 16px;
